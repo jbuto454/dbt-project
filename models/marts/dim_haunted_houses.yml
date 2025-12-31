@@ -8,34 +8,34 @@ models:
         description: "Unique identifier for each house."
         data_tests:
           - unique
-          - not null
+          - not_null
 
       - name: house_name
         description: "Name for each house."
         data_tests:
-          - not null
+          - not_null
 
       - name: park_area
         description: "Park area the house is located in."
         data_tests:
-          - not null
+          - not_null
 
       - name: theme
         description: "Theme of the haunted house."
         data_tests:
-          - not null
+          - not_null
 
       - name: fear_level
         description: "Fear level of the haunted house."
         data_tests:
-          - not null
+          - not_null
 
       - name: house_size_in_ft2
         description: "House size in ft squared."
         data_tests:
-          - not null
+          - not_null
 
       - name: house_size_m2
         description: "House size in m squared."
         data_tests:
-          - not null
+          - not_null

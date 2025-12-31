@@ -33,19 +33,19 @@ models:
       - name: purchase_date
         description: "Date of the ticket purchase."
         data_tests:
-          - not null
+          - not_null
 
       - name: visit_date
         description: "Date of the visit."
         data_tests:
-          - not null
+          - not_null
 
       - name: ticket_type
         description: "Type of ticket."
         data_tests:
-          - not null
+          - not_null
 
       - name: ticket_price
         description: "Price of ticket."
         data_tests:
-          - not null
+          - not_null

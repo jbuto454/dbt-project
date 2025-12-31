@@ -23,7 +23,7 @@ with
             , stg_customers.email
             , stg_valid_domains.valid_domain is not null as is_valid_email
         from stg_customers
-        left join stg_haunted_house_tickets
+        left join stg_valid_domains
             on stg_customers.email_domain = stg_valid_domains.valid_domain
     )
 

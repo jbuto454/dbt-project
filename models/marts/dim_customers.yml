@@ -8,22 +8,22 @@ models:
         description: "Unique identifier for each customer."
         data_tests:
           - unique
-          - not null
+          - not_null
 
       - name: age
         description: "Age for each customer."
         data_tests:
-          - not null
+          - not_null
 
       - name: gender
         description: "The gender of the customer."
         data_tests:
-          - not null
+          - not_null
 
       - name: email
         description: "The email of the customer."
         data_tests:
-          - not null
+          - not_null
 
       - name: is_valid_email
         description: "Is the email domain contained in the valid domains table or not."

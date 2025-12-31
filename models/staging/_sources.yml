@@ -9,3 +9,4 @@ sources:
       - name: raw_customer_feedbacks
       - name: raw_haunted_houses
       - name: raw_haunted_house_tickets
+      - name: valid_domains
