@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: fact_visits
+    description: "This fact table joins the customer's comments and rating for their visits, with other information about their visit."
+    columns:
+      - name: ticket_id
+        description: "Unique identifier for each ticket."
+        data_tests:
+          - unique
+          - not null
+
+      - name: comments
+        description: "Comments for each visit."
+        data_tests:
+          - not null
+
+      - name: rating
+        description: "Rating for each visit."
+        data_tests:
+          - not null
+
+      - name: customer_id
+        description: "Id of the customer who visited."
+        data_tests:
+          - not null
+
+      - name: haunted_house_id
+        description: "If of the haunted house."
+        data_tests:
+          - not null
+
+      - name: purchase_date
+        description: "Date of the ticket purchase."
+        data_tests:
+          - not null
+
+      - name: visit_date
+        description: "Date of the visit."
+        data_tests:
+          - not null
+
+      - name: ticket_type
+        description: "Type of ticket."
+        data_tests:
+          - not null
+
+      - name: ticket_price
+        description: "Price of ticket."
+        data_tests:
+          - not null

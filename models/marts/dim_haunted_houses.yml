@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_haunted_houses
+    description: "This table transforms the data from the haunted houses table to get us the house size in meters squared."
+    columns:
+      - name: haunted_house_id
+        description: "Unique identifier for each house."
+        data_tests:
+          - unique
+          - not null
+
+      - name: house_name
+        description: "Name for each house."
+        data_tests:
+          - not null
+
+      - name: park_area
+        description: "Park area the house is located in."
+        data_tests:
+          - not null
+
+      - name: theme
+        description: "Theme of the haunted house."
+        data_tests:
+          - not null
+
+      - name: fear_level
+        description: "Fear level of the haunted house."
+        data_tests:
+          - not null
+
+      - name: house_size_in_ft2
+        description: "House size in ft squared."
+        data_tests:
+          - not null
+
+      - name: house_size_m2
+        description: "House size in m squared."
+        data_tests:
+          - not null
