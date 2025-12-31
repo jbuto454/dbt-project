@@ -9,7 +9,7 @@ my-snowflake-db:
       user: butoj
       password: Ds0g\xDBo[?&7M9y]3lt
 
-      role: ALL_USERS_ROLE
+      role: ACCOUNTADMIN
       database: PORTFOLIO_DB
       warehouse: COMPUTE_WH
       schema: "{{ env_var('DBT_SCHEMA')}}"
