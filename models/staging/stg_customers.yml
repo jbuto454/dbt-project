@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: staging table for customers
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: age
+        data_tests:
+          - not_null
+      - name: gender
+        data_tests:
+          - not_null
+      - name: email
+        data_tests:
+          - not_null
+      - name: loaded_at
+        data_tests:
+          - not_null

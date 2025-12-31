@@ -27,7 +27,7 @@ select
     purchase_date,
     visit_date,
     ticket_type,
-    ticket_price
+    ticket_price,
     loaded_at
 from source
 where row_num = 1

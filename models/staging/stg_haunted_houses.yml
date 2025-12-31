@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_haunted_houses
+    description: staging table for haunted houses
+    columns:
+      - name: haunted_house_id
+        data_tests:
+          - unique
+          - not_null
+      - name: house_name
+        data_tests:
+          - not_null
+      - name: park_area
+        data_tests:
+          - not_null
+      - name: theme
+        data_tests:
+          - not_null
+      - name: fear_level
+        data_tests:
+          - not_null
+      - name: house_size
+        data_tests:
+          - not_null
+      - name: loaded_at
+        data_tests:
+          - not_null

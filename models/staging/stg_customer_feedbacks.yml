@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_customer_feedbacks
+    description: staging table for customer feedback
+    columns:
+      - name: feedback_id
+        data_tests:
+          - unique
+          - not_null
+      - name: ticket_id
+        data_tests:
+          - not_null
+      - name: rating
+        data_tests:
+          - not_null
+      - name: comments
+        data_tests:
+          - not_null
+      - name: loaded_at
+        data_tests:
+          - not_null
