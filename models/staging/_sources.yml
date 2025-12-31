@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: PORTFOLIO_DB
+    schema: RAW
+    tables:
+      - name: raw_customers
+      - name: raw_customer_feedbacks
+      - name: raw_haunted_houses
+      - name: raw_haunted_house_tickets

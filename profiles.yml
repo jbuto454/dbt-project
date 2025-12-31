@@ -12,10 +12,10 @@ my-snowflake-db:
       role: ACCOUNTADMIN
       database: PORTFOLIO_DB
       warehouse: COMPUTE_WH
-      schema: "{{ env_var('DBT_SCHEMA')}}"
+      schema: staging
       threads: 1
       client_session_keep_alive: False
-      query_tag: "{{ env_var('DBT_SCHEMA')}}"
+      query_tag: staging
 
       # optional
       connect_retries: 0 # default 0
