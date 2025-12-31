@@ -21,18 +21,18 @@ with
 
     , joined as (
         select
-            stg_customer_feedbacks.ticket_id
-            , stg_customer_feedbacks.comments
-            , stg_customer_feedbacks.rating
+            stg_haunted_house_tickets.ticket_id
             , stg_haunted_house_tickets.customer_id
             , stg_haunted_house_tickets.haunted_house_id
             , stg_haunted_house_tickets.purchase_date
             , stg_haunted_house_tickets.visit_date
             , stg_haunted_house_tickets.ticket_type
             , stg_haunted_house_tickets.ticket_price
-        from stg_customer_feedbacks
-        right join stg_haunted_house_tickets
-            on stg_customer_feedbacks.ticket_id = stg_haunted_house_tickets.ticket_id
+            , stg_customer_feedbacks.comments
+            , stg_customer_feedbacks.rating
+        from stg_haunted_house_tickets
+        left join stg_customer_feedbacks
+            on stg_haunted_house_tickets.ticket_id = stg_customer_feedbacks.ticket_id
     )
 
 select *
