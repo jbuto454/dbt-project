@@ -1,39 +1,30 @@
 with
-    stg_orders as (
+    stg_customers as (
         select
-            id
-            , customer
-            , store_id
-            , order_total
-        from {{ ref('stg_orders') }}
-    )
-
-    , stg_customers as (
-        select
-            id
-            , name
+            customer_id
+            , age
+            , gender
+            , email
+            , '@' || split_part(email, '@', 2) as email_domain
         from {{ ref('stg_customers') }}
     )
 
-    , stores_agg as (
+    , stg_valid_domains as (
         select
-            customer
-            , listagg((store_id), ', ') as stores_purchased_from
-            , sum(order_total) as total_amount
-        from stg_orders
-        group by customer
+            valid_domain
+        from {{ ref('stg_valid_domains') }}
     )
 
     , joined as (
         select
-            stores_agg.customer
-            , stores_agg.stores_purchased_from
-            , stores_agg.total_amount
-            , stg_customers.name
-            , stg_customers.id
+            stg_customers.customer_id
+            , stg_customers.age
+            , stg_customers.gender
+            , stg_customers.email
+            , stg_valid_domains.valid_domain is not null as is_valid_email
         from stg_customers
-        left join stores_agg
-            on stg_customers.id = stores_agg.customer
+        left join stg_haunted_house_tickets
+            on stg_customers.email_domain = stg_valid_domains.valid_domain
     )
 
 select *

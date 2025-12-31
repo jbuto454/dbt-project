@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_valid_domains
+    description: staging table for valid domains
+    columns:
+      - name: valid_domain
+        data_tests:
+          - unique
+          - not_null
