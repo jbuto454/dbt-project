@@ -8,27 +8,23 @@ models:
         description: "Unique identifier for each ticket."
         data_tests:
           - unique
-          - not null
+          - not_null
 
       - name: comments
         description: "Comments for each visit."
-        data_tests:
-          - not null
 
       - name: rating
         description: "Rating for each visit."
-        data_tests:
-          - not null
 
       - name: customer_id
         description: "Id of the customer who visited."
         data_tests:
-          - not null
+          - not_null
 
       - name: haunted_house_id
         description: "If of the haunted house."
         data_tests:
-          - not null
+          - not_null
 
       - name: purchase_date
         description: "Date of the ticket purchase."

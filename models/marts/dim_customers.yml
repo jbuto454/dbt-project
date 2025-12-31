@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_customer
+  - name: dim_customers
     description: "This table transforms the data from the customer table and tells us if the customer's email is valid or not."
     columns:
       - name: customer_id
