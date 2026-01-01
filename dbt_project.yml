@@ -3,7 +3,7 @@
 name: 'haunted_houses'
 version: '1.0.0'
 
-# Which "profile" dbt uses for this project.
+# Which "profile" dbt uses for this project
 profile: 'my-snowflake-db'
 
 
